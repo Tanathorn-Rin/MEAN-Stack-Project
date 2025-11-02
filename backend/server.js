@@ -27,6 +27,11 @@ app.use((req, res, next) => {
     next();
 });
 
+// Routes
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to the Workout API' });
+});
+
 // Use workouts routes
 app.use('/api/workouts', workoutsRoutes);
 

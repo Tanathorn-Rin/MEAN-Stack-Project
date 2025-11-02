@@ -19,13 +19,9 @@ router.get('/:id', getWorkout);
 router.post('/', createWorkout);
 
 // Delete a workout
-router.delete('/:id', (req, res) => {
-    res.json({ message: `Delete workout with ID: ${req.params.id}` });
-});
+router.delete('/:id', deleteWorkout);
 
 // Update a workout
-router.patch('/:id', (req, res) => {
-    res.json({ message: `Update workout with ID: ${req.params.id}` });
-});
+router.patch('/:id', updateWorkout);
 
 module.exports = router;
